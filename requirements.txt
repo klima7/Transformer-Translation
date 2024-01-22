@@ -1,0 +1,4 @@
+deepl
+pandas
+argostranslate
+tqdm
