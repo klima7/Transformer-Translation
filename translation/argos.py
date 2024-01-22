@@ -1,5 +1,5 @@
 import os
-os.environ['ARGOS_DEVICE_TYPE'] = 'cuda'
+os.environ['ARGOS_DEVICE_TYPE'] = 'auto'
 
 
 import argostranslate.package
