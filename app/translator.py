@@ -17,17 +17,6 @@ def custom_standardization(input_string):
     return tf.strings.regex_replace(
         lowercase, f"[{re.escape(strip_chars)}]", "")
     
-    
-max_tokens = 25_000
-sequence_length = 30
-
-
-embed_dim = 128
-dense_dim = 4 * embed_dim
-num_heads = 8
-encoder_layers = 4
-decoder_layers = 4
-
 
 def load_text_vectorization(path, standardize=None):
     from_disk = pickle.load(open(path, "rb"))
@@ -37,8 +26,6 @@ def load_text_vectorization(path, standardize=None):
     new_v.adapt(tf.data.Dataset.from_tensor_slices(["xyz"]))
     new_v.set_weights(from_disk['weights'])
     return new_v
-
-
 
 
 class Translator:
@@ -60,6 +47,7 @@ class Translator:
 
 
     def decode_sequence(self, input_sentence):
+        input_sentence = input_sentence.lower()
         target_vocab = self.target_vectorization.get_vocabulary()
         target_index_lookup = dict(zip(range(len(target_vocab)), target_vocab))
         max_decoded_sentence_length = 30

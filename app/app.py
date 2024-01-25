@@ -7,7 +7,7 @@ def get_translator():
     return Translator('model')
 
 
-st.header('PL-EN Translator')
+st.header('Simple PL-EN Translator')
 
 translator = get_translator()
 
