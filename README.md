@@ -1,6 +1,6 @@
 # 🗣️ Transformer Translation
 
-Translation example with transformer model.
+Translation example with transformer model. Maybe not particularly accurate, but quite funny!
 
 🗂 [Dataset](https://huggingface.co/datasets/klima7/en-pl-translation) ✨ [App](https://huggingface.co/spaces/klima7/Simple-PL-EN-Translator)
 
